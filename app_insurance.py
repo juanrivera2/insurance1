@@ -8,4 +8,5 @@ input_direct = {"age":20, "sex":"male", "bmi":20, "children":2, "smoker":"yes", 
 input_df = pd.DataFrame([input_direct])
 predictions_df = predict_model(estimator=model, data=input_df)
 
-print(predictions_df)
+predictions = predictions_df.iloc[0]["prediction_label"]
+st.markdown(predictions)
